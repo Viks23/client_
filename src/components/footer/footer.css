@@ -1,0 +1,34 @@
+
+/* *{
+  border:1px red solid;
+} */
+.footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin:0;
+    position: relative;
+
+  }
+  .f-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 4rem;
+    color:var(--orange);
+  }
+  .f-icons {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  @media screen and (max-width: 480px){
+    .f-content{
+      transform: scale(.5);
+    }
+  }
+
+  

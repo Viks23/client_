@@ -1,0 +1,133 @@
+/* Contact Form */
+.contact-form {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 40vh;
+    margin-top: -1rem;
+    padding-top: 3rem; /* scroll */
+  }
+  
+  .c-right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+  }
+  
+  .c-right > form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .c-right .user {
+    width: 20rem;
+    height: 2rem;
+    padding: 0.3em;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 4rem !important;
+  }
+  
+  .c-button {
+    background-color: rgb(249, 168, 38);
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 38, 0.7);
+    border-radius: 34px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 1px 26px 1px 26px;
+  }
+  
+  .c-button:hover{
+    color: #f9a826;
+  }
+  .c-blur1 {
+    top: 1rem;
+    left: 8rem;
+  }
+  
+  /* Popup Overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus on modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup Content */
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: fade-in 0.3s ease-out; /* Smooth fade-in animation */
+  }
+  
+  /* Close Popup Button */
+  .close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .close-popup:hover {
+    color: var(--primaryColor); /* Highlight on hover */
+  }
+  
+  /* Popup Heading */
+  .popup-content h2 {
+    font-size: 2rem;
+    color: var(--primaryColor);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Popup Paragraph */
+  .popup-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contact-form {
+      padding: 0;
+      flex-direction: column;
+      gap: 5rem;
+      height: 40rem;
+    }
+  
+    .c-right .user {
+      width: 16rem;
+    }
+  }
+  

@@ -1,0 +1,138 @@
+/* Navbar Wrapper */
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.n-wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 10px;
+    top: 0;
+  }
+  
+  .n-left {
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    gap: 2rem;
+    margin-left: 40px;
+  }
+  
+  .n-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f9a826;
+  }
+  
+  .n-right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 300;
+  }
+  
+  .n-list {
+    flex: 10;
+  }
+  
+  .n-list > ul {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+  }
+  
+  .n-list > ul > li > a {
+    font-size: large;
+    font-weight: 500;
+  }
+  
+  .n-list > ul > li > a:hover {
+    cursor: pointer;
+    font-weight: 500;
+    color: #f9a826;
+  }
+  
+  .n-button {
+    background-color: rgb(249, 168, 38);
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 38, 0.7);
+    border-radius: 34px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 11px 26px;
+    flex: 1;
+    display: flex;
+    margin-right: 5vw;
+  }
+  
+  .n-button:hover {
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid #f9a826;
+    color: #f9a826;
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 38, 0.4);
+  }
+  
+  /* Resume Modal Overlay */
+  .resume-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Resume Modal Content */
+  .resume-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    animation: fade-in 0.3s ease-out; /* Smooth fade-in animation */
+  }
+  
+  /* Close Button */
+  .close-resume {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .close-resume:hover {
+    color: var(--primaryColor); /* Highlight on hover */
+  }
+  
+  /* Embed Resume Styling */
+  .embed-resume {
+    width: 100%;
+    height: 600px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
