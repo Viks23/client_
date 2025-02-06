@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Intro.css";
+import "./intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import FullStack from "../../img/fullstack.jpg";

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Portfolio.css";
+import "./portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Sidebar from "../../img/sidebar.png";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Works.css";
+import "./works.css";
 import Upwork from "../../img/Upwork.png";
 import Fiverr from "../../img/fiverr.png";
 import Amazon from "../../img/amazon.png";

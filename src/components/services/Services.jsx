@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Services.css";
+import "./services.css";
 import Card from "../cards/Card";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
