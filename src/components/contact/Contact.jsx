@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./contact.css";
+import axios from 'axios';
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -7,13 +8,28 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // Reset form fields
-    formRef.current.reset();
-    setTimeout(() => {
-      setIsSubmitted(false);
-      window.location.href = "#Home"; // Redirect to home page
-    }, 3000); // Display thank you message for 3 seconds
+
+    const formData = new FormData(formRef.current);
+    const data = {
+      user_name: formData.get('user_name'),
+      user_email: formData.get('user_email'),
+      message: formData.get('message')
+    };
+
+    axios.post('http://localhost:8000/send-email', data)
+      .then(response => {
+        setIsSubmitted(true);
+        // Reset form fields
+        formRef.current.reset();
+        setTimeout(() => {
+          setIsSubmitted(false);
+          window.location.href = "#Home"; // Redirect to home page
+        }, 3000); // Display thank you message for 3 seconds
+      })
+      .catch(error => {
+        console.error('There was an error sending the email!', error);
+        console.error('Error response:', error.response);
+      });
   };
 
   const closePopup = () => {
@@ -35,7 +51,7 @@ const Contact = () => {
             ></div>
           </div>
         </div>
-
+        
         {/* right side form */}
         <div className="c-right">
           <form ref={formRef} onSubmit={handleSubmit}>
