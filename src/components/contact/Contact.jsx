@@ -16,7 +16,7 @@ const Contact = () => {
       message: formData.get('message')
     };
 
-    axios.post('http://localhost:8000/send-email', data)
+    axios.post('https://client-beta-cyan.vercel.app/send-email', data)
       .then(response => {
         setIsSubmitted(true);
         // Reset form fields
